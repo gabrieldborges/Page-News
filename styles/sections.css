@@ -185,8 +185,7 @@ aside{
   header{
     align-items: center;
   }
-  & > div{
-  }
+
   article{
     padding: 2%;
     margin: 0;
