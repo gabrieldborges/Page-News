@@ -35,10 +35,15 @@
   grid-area: weekly;
  
   & > div {
-    grid-template-columns: repeat(4, 292px);
+    grid-auto-flow: column;
+    /* grid-template-columns: repeat(4, 292px); */
     padding-block: 24px;
+    column-gap: 16px;
+    justify-content: space-between;
   }
   figure {
+    max-width: 292px;
+    max-height: 234px;
     position: relative;
     p {
       font: var(--h2);
@@ -53,6 +58,7 @@
 
   img {
     height: 160px;
+    object-fit: cover;
   }
   header {
     /* justify-content: space-between; */
@@ -146,12 +152,13 @@ header{
 aside{
   display: grid;
   grid-area: aside;
+  
 }
  #ads{
   
   line-height: 0;
   box-sizing: border-box;
-  margin-block: auto;
+  
   img{
     border-radius: 5px;
   }
