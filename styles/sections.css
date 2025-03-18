@@ -108,29 +108,7 @@ margin-bottom: 2rem;
   }
 }
 
-@media (width >= 80em) {
-  #featured {
-    margin-bottom: 5rem;
-    display: grid;
-    grid-auto-flow: column;
-    gap: 1rem;
-    & > div {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1rem;
-    }
-  }
 
-
-  #weekly{
-& > div{
-  display: grid;
-  gap: 1rem;
-  grid-auto-flow: column;
-
-}
-  }
-}
 
 header {
   border-top: 1px solid var(--stroke-color);
@@ -155,9 +133,9 @@ header {
 }
 
 #bottom {
-  display: flex;
-  position: relative;
+ 
 }
+
 
 #ai {
   /* border: solid; */
@@ -188,27 +166,44 @@ header {
     margin-top: 6px;
   }
   article {
+    overflow-y: auto;
+    height: 164px;
+    display: flex;
     padding: 2%;
     margin: 0;
     box-sizing: border-box;
+    & div:nth-child(1){
+      order: 2;
+      width: 232px;
+      
+    }
+    & div:nth-child(2){
+
+    }
+
+    & img{
+      width: 5rem;
+      height: 5rem;
+    }
   }
 }
 
+
+
 aside {
+  display: grid;
   width: 100%;
   & > img {
     object-fit: cover;
     width: 100%;
     border-radius: 5px;
+    margin-block: 2rem;
   }
 }
 
 #more {
-  position: absolute;
-  bottom: 0;
-  height: 68%;
+  
   margin-bottom: 0;
-  margin-top: 2rem;
   box-sizing: border-box;
   display: grid;
   grid-template-rows: auto;
@@ -242,4 +237,58 @@ aside {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+@media (width >= 80em) {
+  #featured {
+    margin-bottom: 5rem;
+    display: grid;
+    grid-auto-flow: column;
+    gap: 1rem;
+    & > div {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+  }
+  #weekly{
+& > div{
+  display: grid;
+  gap: 1rem;
+  grid-auto-flow: column;
+
+}
+  }
+  #bottom {
+    display: flex;
+    position: relative;
+    & aside{
+      & > img{
+        margin-block: 0;
+      }
+    }
+  }
+  #ai {
+   & article{
+    height: 100%;
+
+    display: inherit;
+    & div:nth-child(1){
+      order: 2;
+      width: 100%;
+      
+    }
+    & img{
+      width: 11rem;
+      height: 11rem;
+    }
+   }
+  }
+#more{
+  position: absolute;
+  bottom: 0;
+  height: 68%;
+  margin-top: 2rem;
+
+}
+
 }
