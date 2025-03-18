@@ -1,7 +1,9 @@
 #featured {
+  box-sizing: border-box;
   grid-area: featured;
   img {
     height: 100%;
+    width: 100%;
     object-fit: cover;
   }
 
@@ -30,6 +32,7 @@
     }
   }
 }
+
 
 #weekly {
   grid-area: weekly;
@@ -116,9 +119,17 @@ header{
 }
 }
 
+#bottom{
+  display: flex;
+  position: relative;
+}
+
+
+
 
 #ai{
   /* border: solid; */
+  max-width: 696px;
   font: 800 14px/140% var(--font-family);
   display: grid;
   grid-area: ai;
@@ -153,23 +164,25 @@ header{
 }
  
 aside{
-  display: grid;
-  grid-area: aside;
+  width: 100%;
+  & > img{
+    object-fit: cover;
+    width: 100%;
+    border-radius: 5px;
+
+  }
   
 }
- #ads{
-  
-  line-height: 0;
-  box-sizing: border-box;
-  
-  img{
-    border-radius: 5px;
-  }
- }
+
  
+
 #more{
-  /* border: solid; */
-  margin-top: 24px;
+  position: absolute;
+  bottom: 0;
+  height: 68%;
+  margin-bottom: 0;
+  margin-top: 2rem;
+  box-sizing: border-box;
   display: grid;
   grid-template-rows: auto;
   justify-content: space-between;
@@ -186,6 +199,9 @@ aside{
     font: 800 14px/140% var(--font-family);
   }
   header{
+    height: 32px;
+    margin:0;
+    padding: 0;
     align-items: center;
   }
 
@@ -195,4 +211,8 @@ aside{
     box-sizing: border-box;
   }
   }
-  
+  #moremore{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }

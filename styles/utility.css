@@ -1,6 +1,5 @@
 /* utility-first */
 .container {
-  border: solid green;
   --px-lg: 1rem;
   --max-width: 375px;
   width: min(var(--max-width), 100% - var(--px-lg) * 2);
@@ -42,10 +41,13 @@
 @media (width >= 80em) {
   .container {
     --px-lg: 2rem;
-
     --max-width: 80em;
+    margin-inline: auto;
   }
   .desktop-only{
     display: initial;
   }
+}
+.border{
+  /* border: solid red; */
 }
