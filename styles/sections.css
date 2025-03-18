@@ -249,6 +249,10 @@ aside {
       grid-template-columns: 1fr 1fr;
       gap: 1rem;
     }
+    & figure{
+      height: 100%;
+    }
+    
   }
   #weekly{
 & > div{
