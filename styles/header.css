@@ -1,9 +1,15 @@
 #primary {
+  display: flex;
+  justify-content: space-between;
+  border: solid red;
   padding-block: 20px;
   div {
     display: flex;
     align-items: center;
     gap: 8px;
+  }
+  & img{
+    height: 1.25rem;
   }
 
   div:nth-child(2) {
@@ -15,8 +21,34 @@
 }
 
 #secondary{
+  
   justify-content: space-between;
   padding-block: 14px;
   border: solid 1px var(--stroke-color) ;
   border-inline-style: none;
+  overflow-x: auto;
+  align-items: center;
+  gap: 2rem;
+  & a{
+    height: 100%;
+    width: 100%;
+    display: inline-block;
+  }
+  
+  
+}
+body > header{
+  border: solid 4px;
+  width: 100%;
+}
+body{
+  border: solid orange;
+}
+
+@media (width >= 80em){
+  #primary{
+    & img{
+      height: 2rem;
+    }
+  }
 }
