@@ -1,10 +1,19 @@
 #featured {
+  margin-bottom: 2rem;
+  display: grid;
+  gap: 1rem;
   box-sizing: border-box;
-  grid-area: featured;
   img {
     height: 100%;
     width: 100%;
     object-fit: cover;
+  }
+  & > figure {
+    height: 416px;
+  }
+  & > div{
+    display: grid;
+    gap: 1rem;
   }
 
   .card {
@@ -34,35 +43,36 @@
 }
 
 
+
 #weekly {
-  grid-area: weekly;
- 
+margin-bottom: 2rem;
   & > div {
-    grid-auto-flow: column;
     /* grid-template-columns: repeat(4, 292px); */
+    display: grid;
+    gap: 2rem;
     padding-block: 24px;
     column-gap: 16px;
     justify-content: space-between;
   }
   figure {
-    max-width: 292px;
+    max-width: 100%;
     position: relative;
     max-height: 100%;
 
-    p{
+    p {
       font: var(--h2);
-      margin-top: 8px;
+      margin-top: .5rem;
       color: var(--text-color-primary);
+      padding: 0;
     }
-    
   }
   span {
     position: absolute;
     margin: 8px;
   }
-  
+
   img {
-    height: 160px;
+    /* height: 160px; */
     object-fit: cover;
   }
   header {
@@ -72,6 +82,7 @@
     font: var(--text-span);
     color: var(--text-color-secondary);
     font-weight: 600;
+    margin: 0;
   }
   p {
     padding: 4%;
@@ -97,37 +108,58 @@
   }
 }
 
-header{
+@media (width >= 80em) {
+  #featured {
+    margin-bottom: 5rem;
+    display: grid;
+    grid-auto-flow: column;
+    gap: 1rem;
+    & > div {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+  }
+
+
+  #weekly{
+& > div{
+  display: grid;
+  gap: 1rem;
+  grid-auto-flow: column;
+
+}
+  }
+}
+
+header {
   border-top: 1px solid var(--stroke-color);
   padding-top: 12px;
   margin-bottom: 24px;
- a {
-  /* width: 74px; */
-  justify-self: end;
-  align-items: center;
-  gap: 4px;
-  justify-content: space-between;
+  a {
+    /* width: 74px; */
+    justify-self: end;
+    align-items: center;
+    gap: 4px;
+    justify-content: space-between;
 
-  div {
-    background-image: url(./assets/icons/ArrowRight.svg);
-    width: 16px;
-    height: 16px;
-  }
-  &:hover div {
-    background-image: url(./assets/icons/ArrowRightHover.svg);
+    div {
+      background-image: url(./assets/icons/ArrowRight.svg);
+      width: 16px;
+      height: 16px;
+    }
+    &:hover div {
+      background-image: url(./assets/icons/ArrowRightHover.svg);
+    }
   }
 }
-}
 
-#bottom{
+#bottom {
   display: flex;
   position: relative;
 }
 
-
-
-
-#ai{
+#ai {
   /* border: solid; */
   max-width: 696px;
   font: 800 14px/140% var(--font-family);
@@ -135,48 +167,43 @@ header{
   grid-area: ai;
   column-gap: 16px;
   grid-template-rows: auto;
-  img{
+  img {
     width: 176px;
     aspect-ratio: 1/1;
     object-fit: cover;
     /* margin-top: 7px; */
   }
-  h3{
+  h3 {
     margin-block: 8px 4px;
   }
   & > div {
     /* row-gap: 32px; */
     grid-template-rows: auto;
   }
-  p{
+  p {
     font: var(--text-sm);
     color: var(--text-color-secondary);
-  
   }
-  span{
+  span {
     margin-top: 6px;
   }
-  article{
+  article {
     padding: 2%;
     margin: 0;
     box-sizing: border-box;
   }
 }
- 
-aside{
+
+aside {
   width: 100%;
-  & > img{
+  & > img {
     object-fit: cover;
     width: 100%;
     border-radius: 5px;
-
   }
-  
 }
 
- 
-
-#more{
+#more {
   position: absolute;
   bottom: 0;
   height: 68%;
@@ -186,33 +213,33 @@ aside{
   display: grid;
   grid-template-rows: auto;
   justify-content: space-between;
-  img{
+  img {
     width: 72px;
     object-fit: cover;
     aspect-ratio: 1/1;
     margin-top: 7px;
   }
-  span{
+  span {
     margin-block: 2px 8px;
   }
-  h3{
+  h3 {
     font: 800 14px/140% var(--font-family);
   }
-  header{
+  header {
     height: 32px;
-    margin:0;
+    margin: 0;
     padding: 0;
     align-items: center;
   }
 
-  article{
+  article {
     padding: 2%;
     margin: 0;
     box-sizing: border-box;
   }
-  }
-  #moremore{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
+}
+#moremore {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
